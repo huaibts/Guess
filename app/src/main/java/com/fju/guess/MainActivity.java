@@ -19,28 +19,20 @@ public class MainActivity extends AppCompatActivity {
     public void guess(View view){
         EditText edguess = (EditText) findViewById(R.id.ed_guess);
         int guess = Integer.parseInt(edguess.getText().toString());
+        /* int n;
+        n=(int)(Math.random()*10)+1;*/
         if (guess < n){
-            new AlertDialog.Builder(this)
-                    .setTitle("再猜")
-                    .setMessage("大一點")
-                    .setPositiveButton("OK", null)
-                    .show();
-        }else{
-            if(guess > n){
-                new AlertDialog.Builder(this)
-                        .setTitle("再猜")
-                        .setMessage("小一點")
-                        .setPositiveButton("OK", null)
-                        .show();
-                }else{
-                if(guess == n){
+            Toast.makeText(this, "大一點", Toast.LENGTH_SHORT).show();
+        }else if(guess > n){
+                Toast.makeText(this, "小一點", Toast.LENGTH_SHORT).show();
+                }else if(guess == n){
                     new AlertDialog.Builder(this)
                             .setTitle("恭喜!!!")
-                            .setMessage("答對了")
+                            .setMessage("答對了!!")
                             .setPositiveButton("OK", null)
                             .show();
-                }
-            }
+
+
         }
     }
 }
