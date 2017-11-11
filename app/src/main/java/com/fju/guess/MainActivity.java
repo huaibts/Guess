@@ -26,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
         }else if(guess > n){
                 Toast.makeText(this, "小一點", Toast.LENGTH_SHORT).show();
                 }else if(guess == n){
-                   Toast.makeText(this, "答對了!!!", Toast.LENGTH_LONG).show();
+                   new AlertDialog.Builder(this)
+                            .setTitle("恭喜!!!")
+                            .setMessage("答對了!!")
+                            .setPositiveButton("OK", null)
+                            .show();
 
 
         }
