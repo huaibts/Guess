@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -26,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
         }else if(guess > n){
                 Toast.makeText(this, "小一點", Toast.LENGTH_SHORT).show();
                 }else if(guess == n){
-                   new AlertDialog.Builder(this)
+                    Toast.makeText(this, "答對了", Toast.LENGTH_SHORT).show();
+                   /*new AlertDialog.Builder(this)
                             .setTitle("恭喜!!!")
                             .setMessage("答對了!!")
                             .setPositiveButton("OK", null)
-                            .show();
+                            .show();*/
 
 
         }
